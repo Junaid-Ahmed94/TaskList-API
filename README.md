@@ -24,4 +24,4 @@ Followings are the objective achieved.
 First we need to setup our necessary stuff (Python installation and MongoDB), after that navigate to the src folder in CMD and run using 'Python TaskListAPI'. Now you can access the API in browser at 'http://localhost:5000/'
 
 You can use curl command to interact with API. For example:
- 'curl "http://localhost:5000/tasklist"'
+ `curl "http://localhost:5000/tasklist"`
