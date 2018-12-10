@@ -21,7 +21,7 @@ Followings are the objective achieved.
    * Isodate (necessary for Date Formatting)
   
 ## Quick Start
-First we need to setup our necessary stuff (Python installation and MongoDB), after that navigate to the src folder in CMD and run using 'Python TaskListAPI'. Now you can access the API in browser at 'http://localhost:5000/'
+First we need to setup our necessary stuff (Python installation and MongoDB), after that navigate to the src folder in cmd and run using 'Python TaskListAPI'. Now you can access the API in browser at 'http://localhost:5000/'
 
 ## cURL examples
 Adding New Task to the Restful Server.
