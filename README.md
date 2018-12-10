@@ -24,11 +24,11 @@ Followings are the objective achieved.
 First we need to setup our necessary stuff (Python installation and MongoDB), after that navigate to the src folder in CMD and run using 'Python TaskListAPI'. Now you can access the API in browser at 'http://localhost:5000/'
 
 ## cURL examples
-Adding New Task to the Restful Server
+Adding New Task to the Restful Server.
 `curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-05\"}" -H "Content-Type: application/json" -X POST "http://localhost:5000/tasklist" -H "accept: application/json"`
 
-Updating Old Task using the API
+Updating Old Task using the API.
 `curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-07\"}" -H "Content-Type: application/json" -X PUT "http://localhost:5000/tasklist" -H "accept: application/json"`
 
-Removing Task
+Removing Task.
 `curl -X DELETE "http://localhost:5000/task/Complete%20Workout" -H "accept: application/json"`
