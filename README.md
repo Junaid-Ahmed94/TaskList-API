@@ -12,11 +12,9 @@ Followings are the objective achieved.
  ![Server layout](/images/restful_server.PNG)
  
  ## Dependencies
- ----------------
- 
  The project depend on the followings
  
- ⋅⋅* Python 3.x 
- ⋅⋅* Flask + Flask Restplus
- ⋅⋅* PyMongo
- ⋅⋅* MongoDB
+   * Python 3.x. 
+   * Flask + Flask Restplus
+   * PyMongo
+   * MongoDB
