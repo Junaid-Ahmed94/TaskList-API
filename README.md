@@ -9,4 +9,4 @@ Followings are the objective achieved.
 5. User can remove any item by passing 'Task Name'
 
 
- ![Server layout](/images/restful server.png)
+ ![Server layout](/images/restful_server.png)
