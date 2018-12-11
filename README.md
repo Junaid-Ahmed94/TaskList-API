@@ -97,13 +97,13 @@ Updating an existing Task
 ### Using API to Remove Task.
 Removing a Task Does not exist
 <br />`curl -X DELETE "http://localhost:5000/task/Workout" -H "accept: application/json"`
-<br/> `{
+<br/>Response: `{
     "response": "No task found for Workout, nothing can be removed"
 }`
 
 Removing an existing Task
 <br />`curl -X DELETE "http://127.0.0.1:5000/task/Complete%20Workout2" -H "accept: application/json"`
-<br/> `{
+<br/>Response: `{
   "data": {
     "n": 1,
     "ok": 1
