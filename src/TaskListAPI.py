@@ -27,13 +27,13 @@ task_model = api.model('ToDOList', {
 
 @api.route('/tasklist', endpoint='Tasks List')
 class ToDOList(Resource):
+
     def get(self):
         data = []
         cursor = mongo.db.todos.find({},{"_id":0})
         for todos in cursor:
             data.append(todos)
         return jsonify({"response": data})
-
 
     @ns.doc(params={'Task Model': 'All the neccesary Information for the Task.'})
     @ns.expect(task_model, validate=True)
@@ -52,8 +52,8 @@ class ToDOList(Resource):
                     data['Created_Date'] = now.strftime("%Y-%m-%d")
                     mongo.db.todos.insert(data)
             else:
-                return {"response": "information missing"}
-        return redirect(url_for("ToDos"))
+                return {"response": "Information Missing"}
+        return {"response": "A New Task has been created."}
 
     @ns.expect(task_model, validate=True)
     def put(self):
@@ -82,8 +82,7 @@ class ToDOTASK(Resource):
         if task_info:
             return jsonify({"status": "ok", "data": task_info})
         else:
-            return {"response": "No task found for {}".format(Task_Name)}
-    
+            return {"response": "No task found for {}".format(Task_Name)}   
     
     @api.expect('Task_Name')
     def delete(self, Task_Name):
@@ -103,4 +102,3 @@ class ToDOTASK(Resource):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
