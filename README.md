@@ -19,14 +19,24 @@ Followings are the objective achieved.
    * PyMongo
    * MongoDB
    * Isodate (necessary for Date Formatting)
+   * Flask-Pymongo
   
 ## Quick Start
 First we need to setup our necessary stuff (Python installation and MongoDB), after that navigate to the src folder in cmd and run using 'Python TaskListAPI'. Now you can access the API in browser at 'http://localhost:5000/'
 
 ## cURL examples
-Adding New Task to the Restful Server.
-<br />`curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-05\"}" -H "Content-Type: application/json" -X POST "http://localhost:5000/tasklist" -H "accept: application/json"`
+###Adding New Task to the Restful Server.
+Creating New Task
+<br/>`curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-05\"}" -H "Content-Type: application/json" -X POST "http://localhost:5000/tasklist" -H "accept: application/json"`
+`{
+    "response": "A New Task has been created."
+}`
 
+Create a already existing Task.
+<br/>`curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-05\"}" -H "Content-Type: application/json" -X POST "http://localhost:5000/tasklist" -H "accept: application/json"`
+{
+    "response": "Task with the same Name already exists."
+}
 Updating Old Task using the API.
 <br />`curl -d "{\"Task_Name\":\"Complete Workout\", \"Dead_Line\":\"2018-12-07\"}" -H "Content-Type: application/json" -X PUT "http://localhost:5000/tasklist" -H "accept: application/json"`
 
